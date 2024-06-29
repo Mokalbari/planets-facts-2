@@ -1,0 +1,16 @@
+.information {
+  gap: 1.875rem;
+  margin-top: 10vh;
+
+  .information__card {
+    flex: 1;
+    padding: 1.7rem 1.5rem;
+    border: 1px solid hsl(var(--clr-light-grey) / 0.2);
+  }
+
+  .information__card-title {
+    margin-bottom: 1.25em;
+    font-weight: 700;
+    color: hsl(var(--clr-white) / 0.5);
+  }
+}
