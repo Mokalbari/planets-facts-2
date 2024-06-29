@@ -1,0 +1,23 @@
+.header {
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1.5rem;
+  border-bottom: 1px solid hsl(var(--clr-light-grey) / 0.2);
+
+  .header__logo {
+    text-transform: uppercase;
+    font-family: var(--ff-header);
+    font-size: 1.75rem;
+    margin-left: 2rem;
+  }
+
+  .header__menu {
+    gap: 2rem;
+    font-weight: 700;
+    margin-right: 2rem;
+  }
+
+  .header__list-item {
+    list-style: none;
+  }
+}
