@@ -1,0 +1,7 @@
+.planet-image {
+  align-self: center;
+
+  .planet-image__image {
+    display: block;
+  }
+}
