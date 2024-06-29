@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=League+Spartan:wght@100..900&display=swap");
+
+:root {
+  /* COLORS */
+  /* Neutral Colors */
+  --clr-white: 0 0% 100%;
+  --clr-black: 240 67% 8%;
+  --clr-medium-grey: 240 17% 26%;
+  --clr-light-grey: 240 6% 54%;
+
+  /* Additional Colors */
+  --clr-light-blue: 194 48% 49%;
+  --clr-orange: 33 82% 61%;
+  --clr-purple: 263 67% 51%;
+  --clr-red: 10 63% 51%;
+  --clr-bright-red: 2 68% 53%;
+  --clr-dark-orange: 17 73% 46%;
+  --clr-teal: 169 73% 44%;
+  --clr-bright-blue: 222 87% 56%;
+
+  /* TYPOGRAPHIE */
+  /* Font Family */
+  --ff-header: "Antonio", sans-serif;
+  --ff-main: "League Spartan", sans-serif;
+}
+
+/* CASCADING STYLES */
+body {
+  background: hsl(var(--clr-black)) url("/public/background-stars.svg") center;
+  font-family: var(--ff-main);
+  font-size: 16px;
+  color: hsl(var(--clr-white));
+}
+
+/* UTILITY CLASSES */
+/* Page Specific */
+.header-1 {
+  font-family: var(--ff-header);
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+
+.header-2 {
+  font-family: var(--ff-header);
+  font-size: 3.25rem;
+  text-transform: uppercase;
+  letter-spacing: -1.5px;
+}
+
+.header-3 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2.6px;
+}
+
+.header-4 {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* General */
+.flex-row {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
