@@ -15,3 +15,22 @@
     color: hsl(var(--clr-white) / 0.5);
   }
 }
+
+@media (max-width: 700px) {
+  .information {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .information__card {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .information__card-title {
+      margin: 0;
+    }
+  }
+}

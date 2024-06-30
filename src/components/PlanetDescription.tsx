@@ -18,7 +18,10 @@ const PlanetDescription = () => {
           Source: Wikipedia <img src={sourceIcon} alt="Link to wikipedia" />
         </div>
       </div>
-      <div className="planet-article__button-container flex-column">
+      <div
+        id="not-mobile"
+        className="planet-article__button-container flex-column"
+      >
         {buttonList.map((button, index) => (
           <button
             key={button}

@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <header className="header flex-row">
       <span className="header__logo">The planets</span>
-      <nav className="header__nav">
+      <nav id="not-mobile" className="header__nav">
         <menu className="header__menu flex-row">
           {planetList.map(planet => (
             <li className="header__list-item header-3" key={planet.name}>

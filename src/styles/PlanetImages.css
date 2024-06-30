@@ -1,13 +1,14 @@
 .planet-image {
   display: flex;
   align-self: center;
-
+  
   .planet-image__image {
+    max-width: 100%;
     display: block;
   }
 }
 
-@media (min-width: 700px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .planet-image {
     margin-bottom: 10vh;
   }
