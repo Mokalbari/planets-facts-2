@@ -1,10 +1,18 @@
 .planet-image {
   display: flex;
   align-self: center;
+  position: relative;
   
   .planet-image__image {
     max-width: 100%;
-    display: block;
+  }
+
+  .planet-image__image-overlay {
+    max-width: 25%;
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateY(50%) translateX(-50%)
   }
 }
 

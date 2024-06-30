@@ -7,11 +7,26 @@ const PlanetImage = () => {
   const { currentPlanet, currentInformation } = useContext(AppContext)
   return (
     <div className="planet-image">
-      <img
-        src={data[currentPlanet].informations[currentInformation].source}
-        alt="Earth"
-        className="planet-image__image"
-      />
+      {currentInformation !== 2 ? (
+        <img
+          src={data[currentPlanet].informations[currentInformation].source}
+          alt={data[currentPlanet].name}
+          className="planet-image__image"
+        />
+      ) : (
+        <>
+          <img
+            src={data[currentPlanet].informations[0].source}
+            alt="Earth"
+            className="planet-image__image"
+          />
+          <img
+            src={data[currentPlanet].informations[currentInformation].source}
+            alt={data[currentPlanet].name}
+            className="planet-image__image-overlay"
+          />
+        </>
+      )}
     </div>
   )
 }
