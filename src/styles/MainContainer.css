@@ -1,0 +1,15 @@
+.main-container {
+  justify-content: space-between;
+}
+
+@media (min-width: 700px) and (max-width: 1024px) {
+  .main-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .main-container {
+    flex-direction: column;
+  }
+}

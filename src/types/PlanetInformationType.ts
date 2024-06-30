@@ -1,4 +1,4 @@
-interface Planet {
+interface PlanetInformationType {
   name: string
   informations: { content: string; source: string }[]
   rotation: string
@@ -7,4 +7,4 @@ interface Planet {
   temperature: string
 }
 
-export default Planet
+export default PlanetInformationType

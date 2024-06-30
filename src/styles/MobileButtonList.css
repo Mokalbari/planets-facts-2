@@ -1,0 +1,22 @@
+.mobile-navigation-information {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid hsl(var(--clr-light-grey) / 0.2);
+    margin-bottom: 10vh;
+    padding-inline: 2rem;
+    
+    .mobile-navigation-information__button {
+        font-weight: 700;
+        padding: 1rem 0;
+        background-color: hsl(var(--clr-black));
+        border: none;
+        color: hsl(var(--clr-white) / 0.5);
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .mobile-navigation-information {
+        outline: 1px solid red;
+        display: none;
+    }
+}

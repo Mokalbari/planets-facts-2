@@ -2,7 +2,7 @@ import mercury from "../assets/planet-mercury.svg"
 import mercuryInternal from "../assets/planet-mercury-internal.svg"
 import geologyMercury from "../assets/geology-mercury.png"
 
-import venus from "../assets/planet-mercury.svg"
+import venus from "../assets/planet-venus.svg"
 import venusInternal from "../assets/planet-venus-internal.svg"
 import geologyVenus from "../assets/geology-venus.png"
 
@@ -30,19 +30,10 @@ import neptune from "../assets/planet-neptune.svg"
 import neptuneInternal from "../assets/planet-neptune-internal.svg"
 import geologyNeptune from "../assets/geology-neptune.png"
 
-import type Planet from "../types/Planet"
+import type PlanetInformationType from "../types/PlanetInformationType"
+import type PlanetNameType from "../types/PlanetNameType"
 
-export type PlanetType =
-  | "Mercury"
-  | "Venus"
-  | "Earth"
-  | "Mars"
-  | "Jupiter"
-  | "Saturn"
-  | "Uranus"
-  | "Neptune"
-
-export const planets: Record<PlanetType, Planet> = {
+const planets: Record<PlanetNameType, PlanetInformationType> = {
   Mercury: {
     name: "Mercury",
     informations: [
@@ -236,3 +227,5 @@ export const planets: Record<PlanetType, Planet> = {
     temperature: "-201°c",
   },
 }
+
+export default planets

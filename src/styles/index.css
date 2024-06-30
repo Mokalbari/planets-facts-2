@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=League+Spartan:wght@100..900&display=swap");
+
+:root {
+  /* COLORS */
+  /* Neutral Colors */
+  --clr-white: 0 0% 100%;
+  --clr-black: 240 67% 8%;
+  --clr-medium-grey: 240 17% 26%;
+  --clr-light-grey: 240 6% 54%;
+
+  /* Additional Colors */
+  --clr-light-blue: 194 48% 49%;
+  --clr-orange: 33 82% 61%;
+  --clr-purple: 263 67% 51%;
+  --clr-red: 10 63% 51%;
+  --clr-bright-red: 2 68% 53%;
+  --clr-dark-orange: 17 73% 46%;
+  --clr-teal: 169 73% 44%;
+  --clr-bright-blue: 222 87% 56%;
+
+  /* TYPOGRAPHIE */
+  /* Font Family */
+  --ff-header: "Antonio", sans-serif;
+  --ff-main: "League Spartan", sans-serif;
+}
+
+/* CASCADING STYLES */
+body {
+  background: hsl(var(--clr-black)) url("/public/background-stars.svg") center;
+  font-family: var(--ff-main);
+  font-size: 16px;
+  color: hsl(var(--clr-white));
+}
+
+
+
+/* UTILITY CLASSES */
+/* Page Specific */
+.header-1 {
+  font-family: var(--ff-header);
+  font-size: clamp(3rem, -1.9231rem + 7.6923vw, 5rem);
+  text-transform: uppercase;
+  
+}
+
+.header-2 {
+  font-family: var(--ff-header);
+  font-size: clamp(1.5rem, -2.8077rem + 6.7308vw, 3.25rem);
+  text-transform: uppercase;
+  letter-spacing: -1.5px;
+}
+
+.header-3 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2.6px;
+}
+
+.header-4 {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* General */
+.flex-row {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* BREAKPOINTS */
+/* Mobiles : @media (max-width: 700px)  */
+/* Tablets : @media (min-width: 700px) and (max-width: 1024px) */
+/* Desktops : @media (min-width: 1020px) */
+
+/* Tablets */
+@media (min-width: 700px) and (max-width: 1024px) {
+  .header-1 {
+    font-size: clamp(2.5rem, 1.4198rem + 2.4691vw, 3rem);
+  }
+  
+  .header-2 {
+    font-size: 1.5rem;
+  }
+  
+  .header-3 {
+    font-size: 0.6875rem;
+  }
+  
+  .header-4 {
+    font-size: 0.5rem;
+  }
+
+  body {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .header-1 {
+    font-size: 2.5rem;
+  }
+  
+  .header-2 {
+    font-size: 1.25rem;
+  }
+  
+  .header-3 {
+    font-size: 0.5625rem;
+  }
+  
+  .header-4 {
+    font-size: 0.5rem;
+  }
+
+  body {
+    font-size: 0.85rem;
+  }
+}

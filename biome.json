@@ -9,10 +9,20 @@
     "lineWidth": 80,
     "attributePosition": "auto"
   },
-  "organizeImports": { "enabled": true },
+  "organizeImports": {
+    "enabled": true
+  },
   "linter": {
     "enabled": true,
-    "rules": { "recommended": true, "nursery": { "noConsole": "warn" } }
+    "rules": {
+      "recommended": true,
+      "nursery": {
+        "noConsole": "warn"
+      },
+      "a11y": {
+        "useKeyWithClickEvents": "off"
+      }
+    }
   },
   "javascript": {
     "formatter": {
