@@ -7,16 +7,23 @@ import { AppContext } from "../App"
 import type AppContextType from "../types/AppContextType"
 import type PlanetNameType from "../types/PlanetNameType"
 
-const NavBar = () => {
+function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const { setCurrentPlanet, setCurrentInformation } = useContext(
     AppContext,
   ) as AppContextType
 
   const displayMenu = () => setMenuOpen(!menuOpen)
+
   const handleClick = (planetName: PlanetNameType) => () => {
     setCurrentPlanet(planetName)
     setCurrentInformation(0)
+  }
+
+  const handleMobileClick = (planetName: PlanetNameType) => () => {
+    setCurrentPlanet(planetName)
+    setCurrentInformation(0)
+    setMenuOpen(!menuOpen)
   }
 
   const menuItemsColors = [
@@ -69,6 +76,7 @@ const NavBar = () => {
                 <li
                   className="overlay-menu__list-item header-3 flex-row"
                   key={planet.name}
+                  onClick={handleMobileClick(planet.name as PlanetNameType)}
                 >
                   <div
                     className="overlay-menu__list-item-color"
