@@ -9,11 +9,15 @@ import type PlanetNameType from "../types/PlanetNameType"
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
-  const { setCurrentPlanet } = useContext(AppContext) as AppContextType
+  const { setCurrentPlanet, setCurrentInformation } = useContext(
+    AppContext,
+  ) as AppContextType
 
   const displayMenu = () => setMenuOpen(!menuOpen)
-  const handleClick = (planetName: PlanetNameType) => () =>
+  const handleClick = (planetName: PlanetNameType) => () => {
     setCurrentPlanet(planetName)
+    setCurrentInformation(0)
+  }
 
   const menuItemsColors = [
     "#DEF4FC",
