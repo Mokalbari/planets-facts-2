@@ -3,9 +3,9 @@ import type PlanetNameType from "./PlanetNameType"
 
 type AppContextType = {
   currentPlanet: PlanetNameType
-  setCurrentPlanet: React.Dispatch<React.SetStateAction<PlanetNameType>>
+  setCurrentPlanet: (planet: PlanetNameType) => void
   currentInformation: InformationType
-  setCurrentInformation: React.Dispatch<React.SetStateAction<InformationType>>
+  setCurrentInformation: (info: InformationType) => void
 }
 
 export default AppContextType

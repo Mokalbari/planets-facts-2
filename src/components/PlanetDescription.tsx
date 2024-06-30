@@ -1,18 +1,22 @@
 import "../styles/PlanetDescription.css"
 import sourceIcon from "../assets/icon-source.svg"
+import { AppContext } from "../App"
+import { useContext } from "react"
+import data from "../data/data"
 
 const buttonList = ["Overview", "Internal Structure", "Surface Geology"]
 
 const PlanetDescription = () => {
+  const { currentPlanet, currentInformation } = useContext(AppContext)
+
   return (
     <article className="planet-article">
       <div className="planet-article__text-container">
-        <h1 className="planet-article__title header-1">Earth</h1>
+        <h1 className="planet-article__title header-1">
+          {data[currentPlanet].name}
+        </h1>
         <p className="planet-article__description">
-          Third planet from the Sun and the only known planet to harbor life.
-          About 29.2% of Earth's surface is land with remaining 70.8% is covered
-          with water. Earth's distance from the Sun, physical properties and
-          geological history have allowed life to evolve and thrive.
+          {data[currentPlanet].informations[currentInformation].content}
         </p>
         <div className="planet-article__source">
           Source: Wikipedia <img src={sourceIcon} alt="Link to wikipedia" />

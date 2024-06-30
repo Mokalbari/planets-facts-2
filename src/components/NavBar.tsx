@@ -2,11 +2,18 @@ import "../styles/NavBar.css"
 import planetList from "../data/planetList"
 import menuBurger from "../assets/icon-hamburger.svg"
 import chevron from "../assets/icon-chevron.svg"
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { AppContext } from "../App"
+import type AppContextType from "../types/AppContextType"
+import type PlanetNameType from "../types/PlanetNameType"
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
+  const { setCurrentPlanet } = useContext(AppContext) as AppContextType
+
   const displayMenu = () => setMenuOpen(!menuOpen)
+  const handleClick = (planetName: PlanetNameType) => () =>
+    setCurrentPlanet(planetName)
 
   const menuItemsColors = [
     "#DEF4FC",
@@ -31,7 +38,11 @@ const NavBar = () => {
       <nav id="not-mobile" className="header__nav">
         <menu className="header__menu flex-row">
           {planetList.map(planet => (
-            <li className="header__list-item header-3" key={planet.name}>
+            <li
+              className="header__list-item header-3"
+              key={planet.name}
+              onClick={handleClick(planet.name as PlanetNameType)}
+            >
               {planet.name}
             </li>
           ))}

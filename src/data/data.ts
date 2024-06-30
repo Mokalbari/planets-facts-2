@@ -2,7 +2,7 @@ import mercury from "../assets/planet-mercury.svg"
 import mercuryInternal from "../assets/planet-mercury-internal.svg"
 import geologyMercury from "../assets/geology-mercury.png"
 
-import venus from "../assets/planet-mercury.svg"
+import venus from "../assets/planet-venus.svg"
 import venusInternal from "../assets/planet-venus-internal.svg"
 import geologyVenus from "../assets/geology-venus.png"
 

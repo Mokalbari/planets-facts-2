@@ -9,7 +9,14 @@ import type PlanetNameType from "./types/PlanetNameType.ts"
 import type AppContextType from "./types/AppContextType.ts"
 import type InformationType from "./types/InformationType.ts"
 
-export const AppContext = createContext<AppContextType | undefined>(undefined)
+const initialState: AppContextType = {
+  currentPlanet: "Earth",
+  setCurrentPlanet: () => {},
+  currentInformation: 0,
+  setCurrentInformation: () => {},
+}
+
+export const AppContext = createContext<AppContextType>(initialState)
 
 function App() {
   const [currentPlanet, setCurrentPlanet] = useState<PlanetNameType>("Earth")
