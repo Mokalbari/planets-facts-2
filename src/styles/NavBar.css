@@ -105,6 +105,10 @@
   .header__nav#not-mobile {
     display: none;
   }
+    
+  .header {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 700px) {

@@ -109,6 +109,10 @@ body {
   .header-4 {
     font-size: 0.5rem;
   }
+
+  body {
+    font-size: 0.9rem;
+  }
 }
 
 /* Mobile */
@@ -127,5 +131,9 @@ body {
   
   .header-4 {
     font-size: 0.5rem;
+  }
+
+  body {
+    font-size: 0.85rem;
   }
 }
