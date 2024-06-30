@@ -3,11 +3,16 @@ import sourceIcon from "../assets/icon-source.svg"
 import { AppContext } from "../App"
 import { useContext } from "react"
 import data from "../data/data"
+import type InformationType from "../types/InformationType"
 
 const buttonList = ["Overview", "Internal Structure", "Surface Geology"]
 
 const PlanetDescription = () => {
-  const { currentPlanet, currentInformation } = useContext(AppContext)
+  const { currentPlanet, currentInformation, setCurrentInformation } =
+    useContext(AppContext)
+
+  const handleClick = (index: InformationType) => () =>
+    setCurrentInformation(index)
 
   return (
     <article className="planet-article">
@@ -31,6 +36,7 @@ const PlanetDescription = () => {
             key={button}
             type="button"
             className="planet-article__button-item header-3"
+            onClick={handleClick(index as InformationType)}
           >
             <span className="planet-article__button-counter">0{index + 1}</span>{" "}
             {button}
