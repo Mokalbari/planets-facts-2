@@ -26,3 +26,15 @@
     }
   }
 }
+
+@media (min-width: 700px) and (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-bottom: 1.6875rem;
+
+    .header__logo, .header__menu {
+      margin: 0;
+    }
+  }
+}

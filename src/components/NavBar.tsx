@@ -1,5 +1,5 @@
-import '../styles/NavBar.css'
-import planetList from '../data/planetList'
+import "../styles/NavBar.css"
+import planetList from "../data/planetList"
 
 const NavBar = () => {
   return (

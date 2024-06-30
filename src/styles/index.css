@@ -98,7 +98,7 @@ body {
   }
   
   .header-3 {
-    font-size: clamp(0.56rem, 0.2575rem + 0.6914vw, 0.7rem);
+    font-size: 0.6875rem;
   }
   
   .header-4 {
