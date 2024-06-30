@@ -4,7 +4,7 @@ function MobileButtonList() {
   const buttonList = ["Overview", "Structure", "Surface"]
 
   return (
-    <nav className="mobile-navigation-information flex-row">
+    <nav className="mobile-navigation-information">
       {buttonList.map(button => (
         <button
           className="mobile-navigation-information__button header-3"
