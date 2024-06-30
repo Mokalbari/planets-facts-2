@@ -1,4 +1,5 @@
 .planet-image {
+  display: flex;
   align-self: center;
 
   .planet-image__image {
