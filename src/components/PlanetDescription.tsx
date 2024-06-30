@@ -2,10 +2,10 @@ import "../styles/PlanetDescription.css"
 import sourceIcon from "../assets/icon-source.svg"
 import { AppContext } from "../App"
 import { useContext } from "react"
+import { buttonList } from "../lib/buttonList"
+import { planetColors } from "../lib/planetColors"
 import data from "../data/data"
 import type InformationType from "../types/InformationType"
-
-const buttonList = ["Overview", "Internal Structure", "Surface Geology"]
 
 const PlanetDescription = () => {
   const { currentPlanet, currentInformation, setCurrentInformation } =
@@ -37,6 +37,13 @@ const PlanetDescription = () => {
             type="button"
             className="planet-article__button-item header-3"
             onClick={handleClick(index as InformationType)}
+            style={{
+              backgroundColor:
+                currentInformation === index
+                  ? `${planetColors[currentPlanet]}`
+                  : "",
+              color: currentInformation === index ? "white" : "",
+            }}
           >
             <span className="planet-article__button-counter">0{index + 1}</span>{" "}
             {button}
